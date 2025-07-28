@@ -1,0 +1,5 @@
+[Added Associations]
+text/plain=nvim.desktop;
+
+[Default Applications]
+text/plain=nvim-in-foot.desktop
