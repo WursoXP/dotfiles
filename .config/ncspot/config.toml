@@ -1,0 +1,23 @@
+
+use_nerdfont = true
+
+repeat = "playlist"
+
+[theme]
+background = "#000000"
+primary = "#FF7F0A"
+secondary = "#3E003E"
+title = "#FFFFFF"
+playing = "#FFFF00"
+playing_selected = "#FFFF00"
+playing_bg = "#181818"
+highlight = "#FFFF00"
+highlight_bg = "#000000"
+error = "#FF0000"
+error_bg = "#000000"
+statusbar = "#000000"
+statusbar_progress = "#3E003E"
+statusbar_bg = "#3E003E"
+cmdline = "#FFFFFF"
+cmdline_bg = "#000000"
+

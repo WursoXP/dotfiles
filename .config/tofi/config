@@ -1,0 +1,21 @@
+background-color = #000000
+border-color = #9da2c4
+border-width = 1
+
+outline-color = #ffffff
+outline-width = 3
+
+font = "/usr/share/fonts/custom/DTM-Mono.otf"
+font-size = 24
+
+width = 40%
+height = 60%
+
+hide-cursor = true
+
+prompt-text = "♥ "
+prompt-color = #ff0000
+
+input-color = #00ffff
+
+selection-color = #ffff00
