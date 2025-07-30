@@ -16,7 +16,6 @@ return {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "L3MON4D3/LuaSnip",
-        "rafamadriz/friendly-snippets",
         "j-hui/fidget.nvim",
         "saghen/blink.cmp",
     },
@@ -24,6 +23,7 @@ return {
     config = function()
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+
         require("conform").setup({
             formatters_by_ft = {
             }
@@ -83,13 +83,6 @@ return {
                     }
                 end,
             }
-        })
-        require("blink.cmp").setup({
-            keymap = { preset = 'default' },
-            appearance = {
-                use_nvim_cmp_as_default = true,
-                nerd_font_variant = 'mono'
-            },
         })
 
         vim.diagnostic.config({
