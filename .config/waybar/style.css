@@ -95,7 +95,7 @@ button:hover {
     padding: 0px 8px;
     margin: 3px;
     box-shadow:
-	0 0 0 2px #000000,	/*borda preta*/
+	0 0 0 1px #000000,	/*borda preta*/
 
 	1px  0 0 1px #ff7f0a,	/*esquerda borda*/
        -1px  0 0 1px #ff7f0a,	/*direita borda*/
@@ -115,7 +115,8 @@ button:hover {
 #temperature:hover,
 #memory:hover,
 #network:hover,
-#pulseaudio:hover {
+#pulseaudio:hover,
+#power-profiles-daemon:hover {
     color: #ffff00;
     padding: 0px 8px;
     margin: 3px;

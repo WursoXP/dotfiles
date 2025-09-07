@@ -16,9 +16,9 @@ local function ColorMyTerminal()
 					VertSplit    = { fg = "#7e57c2" },
 					StatusLine   = { fg = "#7e57c2", bg = "#1a003e" },
 					StatusLineNC = { fg = "#7e57c2", bg = "#000000" },
-					Identifier   = { fg = "#9bffaf" },  -- Kris
-					Keyword      = { fg = "#c27ba0" },  -- Susie
-					Constant     = { fg = "#fff88f" },  -- Ralsei
+					Identifier   = { fg = "#00a2e8" },  -- Kris
+					Keyword      = { fg = "#ae67af" },  -- Susie
+					Constant     = { fg = "#4ecc8f" },  -- Ralsei
 				}
 			end,
 		},

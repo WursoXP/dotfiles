@@ -1,5 +1,5 @@
 [Added Associations]
-text/plain=nvim.desktop;
+text/plain=nvim-in-foot.desktop;nvim-in-kitty.desktop;nvim-in-terminal.desktop;nvim.desktop;
 x-scheme-handler/http=zen.desktop;
 x-scheme-handler/https=zen.desktop;
 x-scheme-handler/chrome=zen.desktop;
@@ -10,9 +10,11 @@ application/x-extension-shtml=zen.desktop;
 application/xhtml+xml=zen.desktop;
 application/x-extension-xhtml=zen.desktop;
 application/x-extension-xht=zen.desktop;
+application/x-shellscript=foot.desktop;
+image/jpeg=nvim-in-kitty.desktop;
 
 [Default Applications]
-text/plain=nvim-in-foot.desktop
+text/plain=nvim-in-kitty.desktop
 x-scheme-handler/http=zen.desktop
 x-scheme-handler/https=zen.desktop
 x-scheme-handler/chrome=zen.desktop

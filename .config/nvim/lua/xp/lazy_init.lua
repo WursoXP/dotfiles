@@ -12,9 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = {
-	{ import = "xp.lazy"}
-    },
+    spec = { import = "xp.lazy" },
+
+    rocks = { enabled = false},
 
     checker = { enabled = true },
 })

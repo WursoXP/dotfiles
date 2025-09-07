@@ -14,19 +14,21 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term kitty
 # Your preferred application launcher
 set $menu pgrep tofi-run > /dev/null 2>&1 && killall tofi-run || tofi-run | xargs swaymsg exec --
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/xp/images/wallpapers/deltarunefountain.png fill
+output * bg /home/xp/images/wallpapers/deltarunefountain2.png fill
 #
 # Example configuration:
 #
 	output eDP-1 resolution 1920x1080@144.000Hz position 1920,0
 	output HDMI-A-1 resolution 1920x1080@60.000Hz position 0,0
+
+    output * { max_render_time 1 }
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 gaps inner 4px
@@ -41,16 +43,48 @@ client.unfocused        #3e003e #141216 #d8cab8 #3e003e #3e003e
 client.urgent           #ed1c24 #141216 #d8cab8 #ed1c24 #ed1c24
 client.placeholder      #3e003e #141216 #d8cab8 #3e003e #3e003e
 
+## XP CUSTOM
+
+## Pause app
+bindsym $mod+Shift+Ctrl+p exec ~/.config/sway/scripts/toggle-pause-focused.sh
+
+## Battery save mode
+bindsym $mod+Shift+Ctrl+b exec ~/.config/sway/scripts/bateria.sh
+
+set $GTK_THEME "Cat-xp-edit"
+#set $CURSOR_THEME "catppuccin-mocha-dark-cursors"
+set $CURSOR_SIZE 24
+
+set $gnome-schema org.gnome.desktop.interface
+set $gnome-terminal org.gnome.desktop.default-applications.terminal
+set $cinnamon-terminal org.cinnamon.desktop.default-applications.terminal
+
+exec_always gsettings set $gnome-schema gtk-theme $GTK_THEME
+exec_always gsettings set $gnome-terminal exec $term
+exec_always gsettings set $gnome-terminal exec-arg '-e'
+exec_always gsettings set $cinnamon-terminal exec $term
+exec_always gsettings set $cinnamon-terminal exec-arg '-e'
+#exec_always gsettings set $gnome-schema cursor-theme $CURSOR_THEME
+
 for_window [app_id="foot"] opacity 0.925
+for_window [class="code-oss"] opacity 0.96
+for_window [app_id="kitty"] opacity 0.925
+
+exec_always {
+    ibus start
+    export TERMINAL=$term
+}
 
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+ exec swayidle -w \
+          timeout 120 'hyprlock' \
+          timeout 300 'swaymsg "output * power off"' \
+          resume 'swaymsg "output * power on"' \
+          before-sleep 'hyprlock' \
+          --inhibit
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -75,9 +109,10 @@ for_window [app_id="foot"] opacity 0.925
 # Read `man 5 sway-input` for more information about this section.
 
     input type:touchpad {
-        dwt enabled
+        dwt disabled
         tap enabled
         natural_scroll enabled
+        scroll_factor 0.25
     }
 
     input type:pointer {
@@ -152,7 +187,12 @@ for_window [app_id="foot"] opacity 0.925
     bindsym $mod+Shift+Equal output * scale 1.0
 
     #screenshot
-    bindsym $mod+Shift+s exec hyprshot -m region --clipboard-only
+    bindsym $mod+Shift+s exec hyprshot -m region
+#--clipboard-only
+
+    #screenlock
+    exec hyprlock
+    bindsym $mod+Alt+l exec hyprlock
 
 #
 # Workspaces:
