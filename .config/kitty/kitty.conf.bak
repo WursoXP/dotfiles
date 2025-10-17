@@ -2797,6 +2797,15 @@ font_size 15
 cursor_trail 3
 cursor_trail_decay 0.1 0.4
 
+#Layout
+
+enabled_layouts tall:bias=50;full_size=1;mirrored=false
+
 #Theme
 
-background_opacity 0.925
+#background_opacity 0.925 (sway config)
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME

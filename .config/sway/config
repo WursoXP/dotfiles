@@ -21,7 +21,7 @@ set $menu pgrep tofi-run > /dev/null 2>&1 && killall tofi-run || tofi-run | xarg
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/xp/images/wallpapers/deltarunefountain2.png fill
+output * bg /home/xp/Imagens/wallpapers/deltarunefountain2.png fill
 #
 # Example configuration:
 #
@@ -49,7 +49,10 @@ client.placeholder      #3e003e #141216 #d8cab8 #3e003e #3e003e
 bindsym $mod+Shift+Ctrl+p exec ~/.config/sway/scripts/toggle-pause-focused.sh
 
 ## Battery save mode
-bindsym $mod+Shift+Ctrl+b exec ~/.config/sway/scripts/bateria.sh
+bindsym $mod+Shift+Ctrl+b exec foot -e sh -c '/home/xp/.config/sway/scripts/bateria.sh; printf "\nPressione ENTER para fechar..."; read'
+
+## Notification Menu
+bindsym $mod+Shift+x exec 'swaync-client -t -sw'
 
 set $GTK_THEME "Cat-xp-edit"
 #set $CURSOR_THEME "catppuccin-mocha-dark-cursors"
@@ -71,7 +74,9 @@ for_window [class="code-oss"] opacity 0.96
 for_window [app_id="kitty"] opacity 0.925
 
 exec_always {
-    ibus start
+    swaync-client --reload-config
+    swaync-client -rs
+    fcitx5
     export TERMINAL=$term
 }
 
@@ -80,12 +85,12 @@ exec_always {
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 120 'hyprlock' \
-          timeout 300 'swaymsg "output * power off"' \
-          resume 'swaymsg "output * power on"' \
-          before-sleep 'hyprlock' \
-          --inhibit
-#
+        timeout 210 'hyprlock --quiet' \
+        timeout 20 'if pgrep --exact hyprlock; then swaymsg "output * power off"; fi' resume 'swaymsg "output * power on"' \
+        lock 'hyprlock --quiet --immediate' \
+        before-sleep 'hyprlock --quiet --immediate' \
+        after-resume  'hyprlock --quiet'
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
