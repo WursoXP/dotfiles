@@ -10,17 +10,18 @@ Configurações pessoais do meu arch linux atual
 
 ## Programas Importantes
 
+- editor: nvim
 - terminais: foot, kitty
 - teclado: ibus
-- otimizações: supergfxctl, tlp, asusctl
+- otimizações: supergfxctl, ppd (ou tlp), asusctl, thermald
 - greet: agreety
 - compositor: sway
 - bar: waybar
 - screenshot: hyprshot
 - idle: swayidle
 - navegadores: zen, firefox
-- notificações: swaync
 
+- notificações: swaync
 ## TODO
 
 - sincronizar essas pastas com as do sistema

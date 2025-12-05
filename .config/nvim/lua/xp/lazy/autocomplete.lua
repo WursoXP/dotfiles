@@ -33,26 +33,59 @@ return {
                             module = "lazydev.integrations.blink",
                             -- make lazydev completions top priority (see `:h blink.cmp`)
                             score_offset = 100,
+                            transform_items = function (ctx, items)
+                                for _, item in ipairs(items) do
+                                    item.kind_name = 'lazydev'
+                                end
+                                return items
+                            end
                         },
                         lsp = {
-                            min_keyword_length = 2, -- Number of characters to trigger provider
+                            name = "lsp",
+                            min_keyword_length = 0, -- Number of characters to trigger provider
                             score_offset = 0, -- Boost/penalize the score of the items
+                            transform_items = function (ctx, items)
+                                for _, item in ipairs(items) do
+                                    item.kind_name = 'lsp'
+                                end
+                                return items
+                            end
                         },
                         path = {
+                            name = "path",
                             min_keyword_length = 0,
+                            transform_items = function (ctx, items)
+                                for _, item in ipairs(items) do
+                                    item.kind_name = 'path'
+                                end
+                                return items
+                            end
                         },
                         snippets = {
+                            name = "snippets",
                             min_keyword_length = 0,
+                            transform_items = function (ctx, items)
+                                for _, item in ipairs(items) do
+                                    item.kind_name = 'snippets'
+                                end
+                                return items
+                            end
                         },
                         buffer = {
+                            name = "buffer",
                             min_keyword_length = 5,
                             max_items = 5,
+                            transform_items = function (ctx, items)
+                                for _, item in ipairs(items) do
+                                    item.kind_name = 'buffer'
+                                end
+                                return items
+                            end
                         },
                     },
                 },
                 completion = {
                     accept = { auto_brackets = { enabled = true } },
-
                     documentation = {
                         auto_show = true,
                         auto_show_delay_ms = 50,

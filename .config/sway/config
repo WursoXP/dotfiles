@@ -26,16 +26,18 @@ output * bg /home/xp/Imagens/wallpapers/deltarunefountain2.png fill
 # Example configuration:
 #
 	output eDP-1 resolution 1920x1080@144.000Hz position 1920,0
-	output HDMI-A-1 resolution 1920x1080@60.000Hz position 0,0
+	output 'Ancor Communications Inc ASUS VP278 G7LMTF193041' resolution 1920x1080@60.000Hz position 0,0
 
     output * { max_render_time 1 }
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-gaps inner 4px
-gaps outer 4px
+gaps inner 0px
+gaps outer 0px
 
-default_border pixel 3px
-default_floating_border pixel 3px
+default_border pixel 2px
+default_floating_border pixel 2px
+
+smart_borders on
 
 client.focused          #d8cab8 #141216 #d8cab8 #d8cab8 #d8cab8
 client.focused_inactive #3e003e #141216 #d8cab8 #3e003e #3e003e
@@ -71,7 +73,7 @@ exec_always gsettings set $cinnamon-terminal exec-arg '-e'
 
 for_window [app_id="foot"] opacity 0.925
 for_window [class="code-oss"] opacity 0.96
-for_window [app_id="kitty"] opacity 0.925
+for_window [app_id="kitty"] opacity 0.95
 
 exec_always {
     swaync-client --reload-config
@@ -192,8 +194,7 @@ exec_always {
     bindsym $mod+Shift+Equal output * scale 1.0
 
     #screenshot
-    bindsym $mod+Shift+s exec hyprshot -m region
-#--clipboard-only
+    bindsym $mod+Shift+s exec hyprshot -m region --clipboard-only
 
     #screenlock
     exec hyprlock
