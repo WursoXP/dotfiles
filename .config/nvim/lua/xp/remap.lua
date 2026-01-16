@@ -20,6 +20,18 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Terminal
+vim.keymap.set("n","<leader>t", function ()
+    vim.cmd.vnew()
+    vim.cmd.term()
+    vim.cmd.wincmd("J")
+    vim.api.nvim_win_set_height(0, 10)
+end)
+
+
+
+
+--===============================================================================================-
 -- Função para buscar PID do live-server rodando no diretório atual
 local function find_live_server_pid_for_dir(dir)
     local output = vim.fn.systemlist('pgrep -af live-server')

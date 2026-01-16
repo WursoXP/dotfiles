@@ -50,11 +50,17 @@ client.placeholder      #3e003e #141216 #d8cab8 #3e003e #3e003e
 ## Pause app
 bindsym $mod+Shift+Ctrl+p exec ~/.config/sway/scripts/toggle-pause-focused.sh
 
+## Notebook
 ## Battery save mode
 bindsym $mod+Shift+Ctrl+b exec foot -e sh -c '/home/xp/.config/sway/scripts/bateria.sh; printf "\nPressione ENTER para fechar..."; read'
+## Lid
+#bindswitch lid:on output eDP-1 disable
+#bindswitch lid:off output eDP-1 enable
+bindswitch lid:on exec systemctl hibernate
 
 ## Notification Menu
-bindsym $mod+Shift+x exec 'swaync-client -t -sw'
+#bindsym $mod+Shift+x exec 'swaync-client -t -sw'
+bindsym $mod+Shift+x exec "~/.config/swaync/scripts/toggle_cc.sh"
 
 set $GTK_THEME "Cat-xp-edit"
 #set $CURSOR_THEME "catppuccin-mocha-dark-cursors"
@@ -91,7 +97,7 @@ exec_always {
         timeout 20 'if pgrep --exact hyprlock; then swaymsg "output * power off"; fi' resume 'swaymsg "output * power on"' \
         lock 'hyprlock --quiet --immediate' \
         before-sleep 'hyprlock --quiet --immediate' \
-        after-resume  'hyprlock --quiet'
+        after-resume  'swaymsg "output * power on"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when

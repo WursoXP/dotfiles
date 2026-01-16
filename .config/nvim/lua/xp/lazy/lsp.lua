@@ -36,6 +36,8 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "gopls",
+                "pyright",
+                "glsl_analyzer",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -80,6 +82,13 @@ return {
                                 },
                             }
                         }
+                    }
+                end,
+                ["glsl_analyzer"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.glsl_analyzer.setup {
+                        capabilities = capabilities,
+                        filetypes = { "fsh", "vsh" },
                     }
                 end,
             }
