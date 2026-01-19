@@ -30,7 +30,12 @@ return {
 		end, { desc = "telescope grep WORD"})
 
 		vim.keymap.set('n', '<leader>ps', function()
-			builtin.grep_string({ search = vim.fn.input("Grep > ") })
+			builtin.grep_string({
+                search = vim.fn.input("Grep > "),
+                additional_args = function()
+                    return { "--hidden", "--no-ignore" }
+                end,
+            })
 		end, { desc = "telescope grep" })
 
         vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = "" })

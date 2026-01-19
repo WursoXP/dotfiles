@@ -27,6 +27,8 @@ vim.keymap.set("n","<leader>t", function ()
     vim.cmd.wincmd("J")
     vim.api.nvim_win_set_height(0, 10)
 end)
+vim.keymap.set('t', '<Esc>', "<C-\\><C-n>")
+vim.keymap.set('t', '<C-w>', "<C-\\><C-n><C-w>")
 
 
 

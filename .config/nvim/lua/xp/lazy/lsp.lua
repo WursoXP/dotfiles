@@ -1,14 +1,3 @@
-local root_files = {
-  '.luarc.json',
-  '.luarc.jsonc',
-  '.luacheckrc',
-  '.stylua.toml',
-  'stylua.toml',
-  'selene.toml',
-  'selene.yml',
-  '.git',
-}
-
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -36,6 +25,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "gopls",
+                "clangd",
                 "pyright",
                 "glsl_analyzer",
             },
@@ -82,6 +72,13 @@ return {
                                 },
                             }
                         }
+                    }
+                end,
+                ["clangd"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.clangd.setup {
+                        "clangd",
+                        "--fallback-style-none",
                     }
                 end,
                 ["glsl_analyzer"] = function()
