@@ -25,6 +25,7 @@ return {
                     use_nvim_cmp_as_default = false,
                     nerd_font_variant = 'mono'
                 },
+                signature = { enabled = true },
                 sources = {
                     default = {"lazydev", "lsp", "snippets", "path", "buffer" },
                     providers = {
@@ -86,6 +87,11 @@ return {
                 },
                 completion = {
                     accept = { auto_brackets = { enabled = true } },
+                    menu = {
+                        draw = {
+                            treesitter = { "lsp" },
+                        },
+                    },
                     documentation = {
                         auto_show = true,
                         auto_show_delay_ms = 50,
