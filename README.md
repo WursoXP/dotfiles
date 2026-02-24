@@ -27,7 +27,7 @@ Configurações pessoais do meu arch linux atual
 ## Ctrl-C Ctrl-V
 ### Fonts
 ```
-sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fonts-emoji nemo
+sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fonts-emoji nemo kservice5
 ```
 
 ## Workstation
