@@ -25,9 +25,14 @@ Configurações pessoais do meu arch linux atual
 - files: nemo
 
 ## Ctrl-C Ctrl-V
+
+### Variables
+```
+export QT_QPA_PLATFORMTHEME=qt6ct
+```
 ### Fonts
 ```
-sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fonts-emoji nemo kservice5
+sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fonts-emoji nemo kservice5 kde-cli-tools
 ```
 
 ## Workstation
