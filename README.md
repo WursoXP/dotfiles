@@ -29,6 +29,7 @@ Configurações pessoais do meu arch linux atual
 ### Variables
 ```
 export QT_QPA_PLATFORMTHEME=qt6ct
+set -gx QT_QPA_PLATFORMTHEME qt6ct
 ```
 ### Fonts
 ```
