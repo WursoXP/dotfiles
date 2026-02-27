@@ -42,6 +42,7 @@ cat > "$CONFIG_FILE" << EOF
     "script-fail-notify": true,
     "widgets": [
          "buttons-grid",
+         "dnd",
          "volume", 
          "backlight",
          "title",
@@ -54,7 +55,7 @@ cat > "$CONFIG_FILE" << EOF
             "button-text": "Clear"
         },
         "dnd": {
-            "text": " "
+            "text": "Do Not Disturb"
         },
         "label": {
             "max-lines":2,

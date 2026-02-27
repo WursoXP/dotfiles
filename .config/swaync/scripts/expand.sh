@@ -16,7 +16,7 @@ cat > "$CONFIG_FILE" << EOF
 "layer-shell": true,
 "cssPriority": "application",
 
-    "control-center-width": 1500,
+    "control-center-width": 1100,
     "control-center-height": 800, 
     "control-center-margin-top": 0,
     "control-center-margin-bottom": 40,
@@ -42,6 +42,7 @@ cat > "$CONFIG_FILE" << EOF
     "script-fail-notify": true,
     "widgets": [
          "buttons-grid",
+         "dnd",
          "volume", 
          "backlight",
          "title",
@@ -54,7 +55,7 @@ cat > "$CONFIG_FILE" << EOF
             "button-text": "Clear"
         },
         "dnd": {
-            "text": " "
+            "text": "Do Not Disturb"
         },
         "label": {
             "max-lines":2,
