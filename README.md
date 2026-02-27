@@ -12,7 +12,7 @@ Configurações pessoais do meu arch linux atual
 
 - editor: nvim
 - terminais: foot, kitty
-- teclado: ibus
+- teclado: fcitx5
 - otimizações: supergfxctl, ppd (ou tlp), asusctl, thermald
 - greet: agreety
 - compositor: sway
@@ -22,23 +22,23 @@ Configurações pessoais do meu arch linux atual
 - navegadores: zen, firefox
 - notificações: swaync
 - lock: hyprlock
-- files: nemo
+- files: yazi
 
 ## Ctrl-C Ctrl-V
 
 ### Fonts
 ```
-sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fonts-emoji nemo kservice5 kde-cli-tools
+sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fonts-emoji 
 ```
 
 ## Workstation
 ```
-sudo pacman -Syu nvim kitty greetd sway waybar hypershot swayidle firefox swaync hyprlock yay
+sudo pacman -Syu nvim kitty greetd sway waybar hypershot swayidle firefox swaync hyprlock yay yazi
 ```
 ```
 yay --noconfirm zen-browser-bin
 ```
+```
+sudo pacman -Syu less trash-cli fcitx5
+```
   
-## TODO
-
-- sincronizar essas pastas com as do sistema

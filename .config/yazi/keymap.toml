@@ -1,0 +1,17 @@
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ "yank", 'plugin clipboard -- --action=copy' ]
+
+[[mgr.prepend_keymap]]
+on  = "p"
+run = [ 'plugin clipboard -- --action=paste' ]
+
+[[mgr.prepend_keymap]]
+on   = "<C-v>"
+run  = "shell -- wl-paste > pasted-image.png"
+desc = "Paste image from clipboard"
+
+[[mgr.prepend_keymap]]
+on   = ["u"]
+run  = "plugin restore"
+desc = "Restore deleted files"
