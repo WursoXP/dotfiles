@@ -26,7 +26,7 @@ return {
                 "rust_analyzer",
                 "gopls",
                 "clangd",
-                "pyright",
+                "ty",
                 "glsl_analyzer",
             },
             handlers = {
