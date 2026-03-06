@@ -12,6 +12,10 @@ run  = "shell -- wl-paste > pasted-image.png"
 desc = "Paste image from clipboard"
 
 [[mgr.prepend_keymap]]
+on  = "T"
+run = "shell --orphan --confirm kitty"
+
+[[mgr.prepend_keymap]]
 on   = ["u"]
 run  = "plugin restore"
 desc = "Restore deleted files"
