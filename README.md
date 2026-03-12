@@ -33,7 +33,7 @@ sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fo
 
 ## Workstation
 ```
-sudo pacman -Syu nvim kitty greetd sway waybar hypershot swayidle firefox swaync hyprlock yay yazi
+sudo pacman -Syu nvim kitty greetd sway waybar hypershot swayidle firefox swaync hyprlock yay yazi tree-sitter-cli
 ```
 ```
 yay --noconfirm zen-browser-bin
