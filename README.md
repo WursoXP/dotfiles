@@ -41,4 +41,16 @@ yay --noconfirm zen-browser-bin
 ```
 sudo pacman -Syu less trash-cli fcitx5
 ```
-  
+## Remover greeter
+
+`sudo pacman -Syu greetd`
+
+```
+[terminal]
+vt = 1
+
+[initial_session]
+command = "sway"
+user = "teuusuario"
+
+```
