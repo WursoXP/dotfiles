@@ -54,3 +54,9 @@ command = "sway"
 user = "teuusuario"
 
 ```
+
+## Boot Rapido
+
+`boot/loader/entries/linux-cachyos.conf`
+
+em options remover splash e quiet
