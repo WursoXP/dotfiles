@@ -60,3 +60,12 @@ user = "teuusuario"
 `boot/loader/entries/linux-cachyos.conf`
 
 em options remover splash e quiet
+
+`sudo nvim /etc/vconsole.conf`
+
+```
+KEYMAP=br-abnt2
+XKBLAYOUT=br
+XKBMODEL=abnt2
+XKBOPTIONS=terminate:ctrl_alt_bksp
+```
