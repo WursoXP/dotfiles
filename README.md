@@ -33,7 +33,7 @@ sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fo
 
 ## Workstation
 ```
-sudo pacman -Syu nvim kitty greetd sway waybar hypershot swayidle firefox swaync hyprlock yay yazi tree-sitter-cli
+sudo pacman -Syu nvim kitty greetd sway waybar hypershot swayidle firefox swaync hyprlock yay yazi fcitx5
 ```
 ```
 yay --noconfirm zen-browser-bin
@@ -73,4 +73,4 @@ ou aprende a utilizar o systemd-localed/systemd-firstboot :P
 
 `sudo nvim /etc/mkinitcpio.conf`
 
-`HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)`
+`HOOKS=(base udev autodetect microcode kms modconf block keyboard keymap sd-vconsole filesystems fsck)`
