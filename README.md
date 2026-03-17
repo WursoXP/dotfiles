@@ -69,3 +69,8 @@ XKBLAYOUT=br
 XKBMODEL=abnt2
 XKBOPTIONS=terminate:ctrl_alt_bksp
 ```
+ou aprende a utilizar o systemd-localed/systemd-firstboot :P
+
+`sudo nvim /etc/mkinitcpio.conf`
+
+`HOOKS=(base udev autodetect microcode modconf kmds keyboard keymap consolefont blcok filesystems fsck)`
