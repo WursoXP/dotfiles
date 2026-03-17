@@ -73,4 +73,4 @@ ou aprende a utilizar o systemd-localed/systemd-firstboot :P
 
 `sudo nvim /etc/mkinitcpio.conf`
 
-`HOOKS=(base udev autodetect microcode modconf kmds keyboard keymap consolefont blcok filesystems fsck)`
+`HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)`
