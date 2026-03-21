@@ -111,4 +111,4 @@ cat > "$CONFIG_FILE" << EOF
 }
 EOF
 
-swaync-client -R && swaync-client -t && swaync-client -t
+swaync-client -R
