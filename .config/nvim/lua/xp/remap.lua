@@ -124,3 +124,8 @@ vim.keymap.set("n", "<F6>", function()
     print("🛑 live-server finalizado! PID morto: " .. pid)
 end, { desc = "Matar live-server com F6", silent = true })
 
+-- Reiniciar nvim
+-- vim.keymap.set("n", "<leader>re", function()
+-- 	vim.cmd("mks! Session.vim")
+-- 	vim.cmd("restart source Session.vim")
+-- end)

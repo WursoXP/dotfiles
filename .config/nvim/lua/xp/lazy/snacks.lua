@@ -1,8 +1,28 @@
 return {
     "folke/snacks.nvim",
-    lazy= false,
+    lazy = false,
     opts = {
         picker = {
+            layout = "custom",
+            layouts = {
+                custom = {
+                    layout = {
+                        box = "horizontal",
+                        width = 0.9,
+                        min_width = 120,
+                        height = 0.85,
+                        border = false,
+                        {
+                            box = "vertical",
+                            border = "single",
+                            title = "{title} {live} {flags}",
+                            { win = "input", height = 1, border = "bottom" },
+                            { win = "list", border = false },
+                        },
+                        { win = "preview", title = "{preview}", border = "single", width = 0.5 },
+                    },
+                },
+            },
             sources = {
                 files = {
                     hidden = true,  -- seu <leader>pf
@@ -10,7 +30,7 @@ return {
             },
         },
     },
-    keys = {
+        keys = {
         -- Find files (<leader>pf)
         { "<leader>pf", function() Snacks.picker.files() end, desc = "Files" },
         -- Git files (<C-p>)
