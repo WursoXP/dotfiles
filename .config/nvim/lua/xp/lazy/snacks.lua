@@ -3,7 +3,9 @@ return {
     lazy = false,
     -- require("snacks")
     opts = {
-        explorer = { enabled = true },
+        explorer = {
+            enabled = true
+        },
         picker = {
             layout = "custom",
             layouts = {
@@ -30,10 +32,13 @@ return {
                     hidden = true,  -- seu <leader>pf
                 },
             },
+            files = {
+                hidden = true,
+            },
         },
     },
         keys = {
-        { "<leader>i", function() Snacks.explorer() end},
+        { "<leader>e", function() Snacks.explorer() end},
         -- Find files (<leader>pf)
         { "<leader>pf", function() Snacks.picker.files() end, desc = "Files" },
         -- Git files (<C-p>)
