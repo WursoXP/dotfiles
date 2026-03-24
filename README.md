@@ -39,7 +39,7 @@ sudo pacman -Syu nvim kitty greetd sway waybar hypershot swayidle firefox swaync
 yay --noconfirm zen-browser-bin
 ```
 ```
-sudo pacman -Syu less trash-cli fcitx5 imagemagick tectonic mermaid-cli
+sudo pacman -Syu less trash-cli fcitx5 imagemagick tectonic mermaid-cli ghostscript
 ```
 ## Remover greeter
 

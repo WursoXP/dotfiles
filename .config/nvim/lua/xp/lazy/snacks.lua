@@ -1,7 +1,9 @@
 return {
     "folke/snacks.nvim",
     lazy = false,
+    -- require("snacks")
     opts = {
+        explorer = { enabled = true },
         picker = {
             layout = "custom",
             layouts = {
@@ -31,6 +33,7 @@ return {
         },
     },
         keys = {
+        { "<leader>i", function() Snacks.explorer() end},
         -- Find files (<leader>pf)
         { "<leader>pf", function() Snacks.picker.files() end, desc = "Files" },
         -- Git files (<C-p>)
