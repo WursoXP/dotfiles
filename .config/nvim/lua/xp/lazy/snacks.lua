@@ -3,9 +3,26 @@ return {
     lazy = false,
     -- require("snacks")
     opts = {
-        explorer = {
-            enabled = true
+        bigfile = { enabled = true, },
+        indent = {
+            enabled = true,
+            indent = {
+                enabled = false,
+            },
+            scope = {
+                underline = true,
+                -- char = ".",
+            },
+            chunck = {
+                enabled = true,
+            },
+            animate = {
+                enabled = false,
+            },
         },
+        terminal = { enabled = true, },
+        notifier = { enabled = true, timeout = 3000 },
+        explorer = { enabled = true, trash = true },
         picker = {
             layout = "custom",
             layouts = {
@@ -31,14 +48,29 @@ return {
                 files = {
                     hidden = true,  -- seu <leader>pf
                 },
+                explorer = {
+                    hidden = true,
+                    ignored = true,
+                    auto_close = true,
+                },
             },
-            files = {
-                hidden = true,
+        },
+        styles = {
+            notification = {
+                border = "single",
+            },
+            notification_history = {
+                border = "single",
             },
         },
     },
         keys = {
-        { "<leader>e", function() Snacks.explorer() end},
+        -- Terminal
+        { "<leader>t", function() Snacks.terminal.toggle() end, desc = "Toggle terminal"},
+        -- Notifier
+        { "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Notification History" },
+        -- Explorer
+        { "<leader>e", function() Snacks.explorer() end, desc = "Explorer" },
         -- Find files (<leader>pf)
         { "<leader>pf", function() Snacks.picker.files() end, desc = "Files" },
         -- Git files (<C-p>)
