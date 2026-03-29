@@ -52,7 +52,10 @@ vt = 1
 [initial_session]
 command = "sway"
 user = "teuusuario"
-
+# se for nvidia adicione isso"
+[default_session]
+command = "agreety -cmd sway --unsupported-gpu"
+user = "teu usuario"
 ```
 
 ## Boot Rapido
