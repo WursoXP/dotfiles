@@ -17,7 +17,7 @@ Configurações pessoais do meu arch linux atual
 - greet: agreety
 - compositor: sway
 - bar: waybar
-- screenshot: hyprshot
+- screenshot: simshot (mthuss)
 - idle: swayidle
 - navegadores: zen, firefox
 - notificações: swaync
@@ -77,3 +77,7 @@ ou aprende a utilizar o systemd-localed/systemd-firstboot :P
 `sudo nvim /etc/mkinitcpio.conf`
 
 `HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)`
+
+## Simshot
+
+`https://github.com/mthuss/simshot#`

@@ -1,6 +1,7 @@
 return {
     "folke/snacks.nvim",
     lazy = false,
+    priority = 1000,
     -- require("snacks")
     opts = {
         bigfile = { enabled = true, },
