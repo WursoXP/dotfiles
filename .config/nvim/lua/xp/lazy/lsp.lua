@@ -23,15 +23,19 @@ return {
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
+          "marksman",
+          "html",
+          "cssls",
 					"lua_ls",
 					"stylua",
-					"rust_analyzer",
+					-- "rust_analyzer",
 					"clangd",
-					"ty",
+					-- "ty",
           "basedpyright",
+          --"zuban",
           "djlsp",
-					"glsl_analyzer",
-					"zls",
+					-- "glsl_analyzer",
+					-- "zls",
 				},
 				automatic_enable = true,
 			})
