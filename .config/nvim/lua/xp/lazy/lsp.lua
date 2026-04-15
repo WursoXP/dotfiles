@@ -50,14 +50,15 @@ return {
 				capabilities = capabilities,
 			})
 
-			-- vim.lsp.enable({
+			vim.lsp.enable({
+        "djlsp",
 			--     "lua_ls",
 			--     "rust_analyzer",
 			--     "clangd",
 			--     "ty",
 			--     "glsl_analyzer",
 			--     "zls",
-			-- })
+			})
 
 			vim.diagnostic.config({
 				update_in_insert = true,
