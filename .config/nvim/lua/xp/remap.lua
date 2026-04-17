@@ -1,6 +1,16 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- tabs
+vim.keymap.set("n", "<c-t>", ":tabnew<CR>")
+vim.keymap.set("n", "<a-q>", ":tabclose<CR>")
+vim.keymap.set("n", "<a-1>", "1gt")
+vim.keymap.set("n", "<a-2>", "2gt")
+vim.keymap.set("n", "<a-3>", "3gt")
+vim.keymap.set("n", "<a-4>", "4gt")
+vim.keymap.set("n", "<a-5>", "5gt")
+vim.keymap.set("n", "<a-6>", "6gt")
+
 -- move linhas
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
