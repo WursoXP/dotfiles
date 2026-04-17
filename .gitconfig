@@ -1,5 +1,5 @@
-[includeIf "gitdir:/home/xp/dev/pessoal/**"]
-    path = "/home/xp/dev/pessoal/.gitconfig"
+[includeIf "gitdir:/home/xp/dev/privado/**"]
+    path = "/home/xp/dev/privado/.gitconfig"
 
 [includeIf "gitdir:/home/xp/dev/publico/**"]
     path = "/home/xp/dev/publico/.gitconfig"
