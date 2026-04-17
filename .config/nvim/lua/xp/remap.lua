@@ -3,13 +3,13 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- tabs
 vim.keymap.set("n", "<c-t>", ":tabnew<CR>")
-vim.keymap.set("n", "<a-q>", ":tabclose<CR>")
-vim.keymap.set("n", "<a-1>", "1gt")
-vim.keymap.set("n", "<a-2>", "2gt")
-vim.keymap.set("n", "<a-3>", "3gt")
-vim.keymap.set("n", "<a-4>", "4gt")
-vim.keymap.set("n", "<a-5>", "5gt")
-vim.keymap.set("n", "<a-6>", "6gt")
+vim.keymap.set({"n", "i"}, "<a-q>", ":tabclose<CR>")
+vim.keymap.set({"n", "i"}, "<a-1>", "<Esc>1gt")
+vim.keymap.set({"n", "i"}, "<a-2>", "<Esc>2gt")
+vim.keymap.set({"n", "i"}, "<a-3>", "<Esc>3gt")
+vim.keymap.set({"n", "i"}, "<a-4>", "<Esc>4gt")
+vim.keymap.set({"n", "i"}, "<a-5>", "<Esc>5gt")
+vim.keymap.set({"n", "i"}, "<a-6>", "<Esc>6gt")
 
 -- move linhas
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
