@@ -26,7 +26,7 @@ output * bg /home/xp/Imagens/wallpapers/deltarunefountain2.png fill
 # Example configuration:
 #
 	output HDMI-A-2 resolution 1280x1024@75.025Hz position 0,0
-	# output 'Ancor Communications Inc ASUS VP278 G7LMTF193041' resolution 1920x1080@60.000Hz position 0,0
+	output 'Ancor Communications Inc ASUS VP278 G7LMTF193041' resolution 1920x1080@60.000Hz position 0,0
 
     output * { max_render_time 1 }
 #
@@ -52,18 +52,17 @@ bindsym $mod+Shift+Ctrl+p exec ~/.config/sway/scripts/toggle-pause-focused.sh
 
 ## Notebook
 ## Battery save mode
-# bindsym $mod+Shift+Ctrl+b exec foot -e sh -c '/home/xp/.config/sway/scripts/bateria.sh; printf "\nPressione ENTER para fechar..."; read'
+ bindsym $mod+Shift+Ctrl+b exec foot -e sh -c '/home/xp/.config/sway/scripts/bateria.sh; printf "\nPressione ENTER para fechar..."; read'
 ## Lid
 #bindswitch lid:on output eDP-1 disable
 #bindswitch lid:off output eDP-1 enable
-# bindswitch lid:on exec systemctl hibernate
+ bindswitch lid:on exec systemctl hibernate
 #
 ## Notification Menu
 #bindsym $mod+Shift+x exec 'swaync-client -t -sw'
 bindsym $mod+Shift+x exec "~/.config/swaync/scripts/toggle_cc.sh"
 
 set $GTK_THEME "Cat-xp-edit"
-#set $CURSOR_THEME "catppuccin-mocha-dark-cursors"
 set $CURSOR_THEME "Posy_Cursor_Mono_Black"
 set $CURSOR_SIZE 24
 
@@ -73,7 +72,7 @@ set $cinnamon-terminal org.cinnamon.desktop.default-applications.terminal
 
 exec_always gsettings set $gnome-schema gtk-theme $GTK_THEME
 exec_always gsettings set $gnome-schema cursor-theme $CURSOR_THEME
-seat seat0 xcursor_theme $CURSOR_THEME $CURSOR_SIZE
+#seat seat0 xcursor_theme $CURSOR_THEME $CURSOR_SIZE
 exec_always gsettings set $gnome-terminal exec $term
 exec_always gsettings set $gnome-terminal exec-arg '-e'
 exec_always gsettings set $cinnamon-terminal exec $term
@@ -134,7 +133,7 @@ exec_always {
 
     input type:pointer {
         accel_profile flat
-        pointer_accel 0.5
+        pointer_accel -0.5
     }
 
     input type:keyboard {
@@ -214,6 +213,8 @@ exec_always {
     #screenlock
     exec hyprlock
     bindsym $mod+Alt+l exec hyprlock
+
+    #calendar
 
 #
 # Workspaces:

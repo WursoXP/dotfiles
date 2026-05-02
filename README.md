@@ -81,3 +81,14 @@ ou aprende a utilizar o systemd-localed/systemd-firstboot :P
 ## Simshot
 
 `https://github.com/mthuss/simshot#`
+
+## Symlinks
+
+`stow -nvt ~ .`
+
+esse comando permite ver os symlinks criados,
+recomendações:
+    Criar estes caminhos antes de realizar o stow:
+    ~/Pictures
+    .config/fish
+Não recomendo fazer stow do conf do sway.
