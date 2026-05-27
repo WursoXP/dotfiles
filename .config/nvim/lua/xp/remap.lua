@@ -28,6 +28,10 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- leitura
+vim.keymap.set('n', '<leader>le1', ':set wrap!<CR>', { desc = 'Toggle Wrap' })
+vim.keymap.set('n', '<leader>le2', ':set linebreak!<CR>', { desc = 'Toggle Wrap' })
+
 -- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 --===============================================================================================-
