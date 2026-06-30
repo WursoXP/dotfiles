@@ -1,0 +1,28 @@
+[CompactMode]
+PreviewSize=64
+
+[DetailsMode]
+LeftPadding=7
+PreviewSize=96
+
+[ExtractDialog]
+1920x1080 screen: Height=1046
+1920x1080 screen: Width=956
+
+[General]
+ModifiedStartupSettings=true
+Version=202
+ViewPropsTimestamp=2025,10,24,16,26,51.172
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,cursorthumbnail,textthumbnail,audiothumbnail,djvuthumbnail,blenderthumbnail,mobithumbnail,gsthumbnail,rawthumbnail,glycin-heif,comicbookthumbnail,opendocumentthumbnail,kraorathumbnail,ebookthumbnail,windowsexethumbnail,heif,glycin-image-rs,glycin-svg,webp-pixbuf,imagethumbnail,windowsimagethumbnail,exrthumbnail,jpegthumbnail,svgthumbnail,glycin-jxl,directorythumbnail
+
+[UiSettings]
+ColorScheme=qt6ct

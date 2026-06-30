@@ -27,6 +27,9 @@ Configurações pessoais do meu arch linux atual
 ## Ctrl-C Ctrl-V
 
 ### Fonts
+
+Coloque as fonts baixadas em /usr/share/fonts/custom/
+
 ```
 sudo pacman -Syu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome noto-fonts-emoji 
 ```
