@@ -1,0 +1,2 @@
+# Auto float apps
+for_window [app_id="(pavucontrol|psensor)"] floating enable
