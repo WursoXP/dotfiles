@@ -62,6 +62,9 @@ bindsym $mod+Shift+Ctrl+p exec ~/.config/sway/scripts/toggle-pause-focused.sh
 #bindsym $mod+Shift+x exec 'swaync-client -t -sw'
 bindsym $mod+Shift+x exec "~/.config/swaync/scripts/toggle_cc.sh"
 
+## Color Picker
+bindsym $mod+Shift+F exec hyprpicker -a
+
 set $GTK_THEME "Cat-xp-edit"
 set $CURSOR_THEME "Posy_Cursor_Mono_Black"
 set $CURSOR_SIZE 24
