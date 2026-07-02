@@ -21,7 +21,7 @@ set $menu pgrep tofi-run > /dev/null 2>&1 && killall tofi-run || tofi-run | xarg
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/xp/Imagens/wallpapers/deltarunefountain2.png fill
+output * bg ~/.deltarune-theme/wallpapers/deltarunefountain2.png fill
 #
 # Example configuration:
 #

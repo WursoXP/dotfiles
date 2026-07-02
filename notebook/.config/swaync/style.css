@@ -8,7 +8,7 @@
   background: rgba(0, 0, 0, 1);
   background-clip: padding-box;
   border: 26px solid transparent;
-  border-image: url("../../Imagens/customizacoes/deltarune_border_password.png") 26 27;
+  border-image: url("~/.deltarune-theme/images/deltarune_border_password.png") 26 27 repeat;
   border-width: 52px;
   border-radius: 0px;
   margin: 2px;
