@@ -44,12 +44,17 @@ yay --noconfirm zen-browser-bin
 ```
 sudo pacman -Syu less trash-cli fcitx5 imagemagick tectonic mermaid-cli ghostscript lazygit
 ```
+## customizações
 ```
-sudo pacman -Syu frameworkintegration
+yay spotify 
+yay spicetify-cli
+
+sudo chmod a+wr /opt/spotify
+sudo chmod a+wr /opt/spotify/Apps -R
+
+spicetify backup apply
 ```
-```
-yay darkly-bin
-```
+
 ## Remover greeter
 
 `sudo pacman -Syu greetd`
