@@ -1,2 +1,3 @@
 # Auto float apps
 for_window [app_id="(pavucontrol|psensor)"] floating enable
+for_window [title="Extension: \(Bitwarden Password Manager\)"] floating enable
