@@ -14,7 +14,7 @@ cat > "$CONFIG_FILE" << EOF
 "layer": "overlay",
 "control-center-layer": "top",
 "layer-shell": true,
-"cssPriority": "application",
+"cssPriority": "user",
 
     "control-center-width": 1100,
     "control-center-height": 800, 

@@ -4,9 +4,9 @@ local function ColorMyTerminal()
 		transparent_background = false,
 		color_overrides = {
 			mocha = {
-				base = "#040006",
-				mantle = "#1e004f",
-				crust = "#1a003e",
+				base = "#010101",
+				mantle = "#020202",
+				crust = "#030303",
 		      },
 		    },
 		highlight_overrides = {
