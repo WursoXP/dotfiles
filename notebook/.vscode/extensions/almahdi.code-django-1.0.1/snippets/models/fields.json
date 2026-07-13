@@ -1,0 +1,187 @@
+{
+  "marray": {
+    "prefix": "marray",
+    "body": "${1:field_name} = models.ArrayField()",
+    "description": "Field - models.ArrayField *PostgreSQL specific model fields*"
+  },
+  "mauto": {
+    "prefix": "mauto",
+    "body": "${1:field_name} = models.AutoField($2)",
+    "description": "Field - models.AutoField"
+  },
+  "mbigauto": {
+    "prefix": "mbigauto",
+    "body": "${1:field_name} = models.BigAutoField($2)",
+    "description": "Field - models.BigAutoField"
+  },
+  "mbigint": {
+    "prefix": "mbigint",
+    "body": "${1:field_name} = models.BigIntegerField($2)",
+    "description": "Field - models.BigIntegerField"
+  },
+  "mbinary": {
+    "prefix": "mbinary",
+    "body": "${1:field_name} = models.BinaryField($2)",
+    "description": "Field - models.BinaryField"
+  },
+  "mbool": {
+    "prefix": "mbool",
+    "body": "${1:field_name} = models.BooleanField($2)",
+    "description": "Field - models.BooleanField"
+  },
+  "mchar": {
+    "prefix": "mchar",
+    "body": "${1:field_name} = models.CharField($2, max_length=${3:50})",
+    "description": "Field - models.CharField"
+  },
+  "mcoseint": {
+    "prefix": "mcoseint",
+    "body": "${1:field_name} = models.CommaSeparatedIntegerField($2)",
+    "description": "Field - models.CommaSeparatedIntegerField"
+  },
+  "mdate": {
+    "prefix": "mdate",
+    "body": "${1:field_name} = models.DateField($2, auto_now=${3:False}, auto_now_add=${4:False})",
+    "description": "Field - models.DateField"
+  },
+  "mdatetime": {
+    "prefix": "mdatetime",
+    "body": "${1:field_name} = models.DateTimeField($2, auto_now=${3:False}, auto_now_add=${4:False})",
+    "description": "Field - models.DateTimeField"
+  },
+  "mdecimal": {
+    "prefix": "mdecimal",
+    "body": "${1:field_name} = models.DecimalField($2, max_digits=${3:5}, decimal_places=${4:2})",
+    "description": "Field - models.DecimalField"
+  },
+  "mduration": {
+    "prefix": "mduration",
+    "body": "${1:field_name} = models.DurationField($2)",
+    "description": "Field - models.DurationField"
+  },
+  "memail": {
+    "prefix": "memail",
+    "body": "${1:field_name} = models.EmailField($2, max_length=${3:254})",
+    "description": "Field - models.EmailField"
+  },
+  "mfile": {
+    "prefix": "mfile",
+    "body": "${1:field_name} = models.FileField($2, upload_to=${3:None}, max_length=${4:100})",
+    "description": "Field - models.FileField"
+  },
+  "mfilepath": {
+    "prefix": "mfilepath",
+    "body": "${1:field_name} = models.FilePathField($2, path=${3:None}, match=${4:None}, recursive=${5:recursive}, max_length=${6:100})",
+    "description": "Field - models.FilePathField"
+  },
+  "mfk": {
+    "prefix": "mfk",
+    "body": "${1:field_name} = models.ForeignKey(${2:ModelName}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
+    "description": "Field - models.ForeignKey"
+  },
+  "mfloat": {
+    "prefix": "mfloat",
+    "body": "${1:field_name} = models.FloatField($2)",
+    "description": "Field - models.FloatField"
+  },
+  "mgenericip": {
+    "prefix": "mgenericip",
+    "body": "${1:field_name} = models.GenericIPAddressField($2, protocol=${3:'both'}, unpack_ipv4=${4:False})",
+    "description": "Field - models.GenericIPAddressField"
+  },
+  "mimg": {
+    "prefix": "mimg",
+    "body": "${1:field_name} = models.ImageField($2, upload_to=${3:None}, height_field=${4:None}, width_field=${5:None}, max_length=${5:100})",
+    "description": "Field - models.ImageField"
+  },
+  "mint": {
+    "prefix": "mint",
+    "body": "${1:field_name} = models.IntegerField($2)",
+    "description": "Field - models.IntegerField"
+  },
+  "mip": {
+    "prefix": "mip",
+    "body": "${1:field_name} = models.IPAddressField($2)",
+    "description": "Field - models.IPAddressField"
+  },
+  "mjson": {
+    "prefix": "mjson",
+    "body": "${1:field_name} = models.JSONField()",
+    "description": "Field - models.JSONField *PostgreSQL specific model fields*"
+  },
+  "mm2m": {
+    "prefix": "mm2m",
+    "body": "${1:field_name} = models.ManyToManyField(${2:ModelName})",
+    "description": "Field - models.ManyToManyField"
+  },
+  "mnullbool": {
+    "prefix": "mnullbool",
+    "body": "${1:field_name} = models.NullBooleanField($2)",
+    "description": "Field - models.NullBooleanField"
+  },
+  "mo2o": {
+    "prefix": "mo2o",
+    "body": "${1:field_name} = models.OneToOneField(${2:ModelName}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
+    "description": "Field - models.OneToOneField"
+  },
+  "mphone": {
+    "prefix": "mphone",
+    "body": "${1:field_name} = PhoneNumberField($2)",
+    "description": "Field - PhoneNumberField (django-phonenumber-field)"
+  },
+  "mposint": {
+    "prefix": "mposint",
+    "body": "${1:field_name} = models.PositiveIntegerField($2)",
+    "description": "Field - models.PositiveIntegerField"
+  },
+  "mpossmallint": {
+    "prefix": "mpossmallint",
+    "body": "${1:field_name} = models.PositiveSmallIntegerField($2)",
+    "description": "Field - models.PositiveSmallIntegerField"
+  },
+  "mslug": {
+    "prefix": "mslug",
+    "body": "${1:field_name} = models.SlugField($2)",
+    "description": "Field - models.SlugField"
+  },
+  "msmallint": {
+    "prefix": "msmallint",
+    "body": "${1:field_name} = models.SmallIntegerField($2)",
+    "description": "Field - models.SmallIntegerField"
+  },
+  "mstore": {
+    "prefix": "mstore",
+    "body": "${1:field_name} = models.HStoreField()",
+    "description": "Field - models.HStoreField"
+  },
+  "mtext": {
+    "prefix": "mtext",
+    "body": "${1:field_name} = models.TextField($2)",
+    "description": "Field - models.TextField"
+  },
+  "mtime": {
+    "prefix": "mtime",
+    "body": "${1:field_name} = models.TimeField($2, auto_now=${4:False}, auto_now_add=${5:False})",
+    "description": "Field - models.TimeField"
+  },
+  "murl": {
+    "prefix": "murl",
+    "body": "${1:field_name} = models.URLField($2, max_length=${3:200})",
+    "description": "Field - models.URLField"
+  },
+  "musstate": {
+    "prefix": "musstate",
+    "body": "${1:field_name} = USStateField($2)",
+    "description": "Field - USStateField (django-localflavor)"
+  },
+  "muuid": {
+    "prefix": "muuid",
+    "body": "${1:field_name} = models.UUIDField($2)",
+    "description": "Field - models.UUIDField"
+  },
+  "mxml": {
+    "prefix": "mxml",
+    "body": "${1:field_name} = models.XMLField($2)",
+    "description": "Field - models.XMLField"
+  }
+}
