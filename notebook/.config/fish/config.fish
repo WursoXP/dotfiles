@@ -13,4 +13,7 @@ if status is-interactive
     set --universal tide_character_color 43cc8f
     set --universal tide_left_prompt_items {$RestoEsquerda} context pwd git newline character
     set --universal tide_right_prompt_items status time
+
+    fish_add_path ~/.npm-global/bin
+
 end

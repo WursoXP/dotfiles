@@ -44,6 +44,11 @@ yay --noconfirm zen-browser-bin
 ```
 sudo pacman -Syu less trash-cli fcitx5 imagemagick tectonic mermaid-cli ghostscript lazygit
 ```
+
+```
+npm install -g live-server
+```
+
 ## customizações
 ```
 yay spotify 
