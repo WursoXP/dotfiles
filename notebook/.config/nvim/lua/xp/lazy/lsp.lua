@@ -27,6 +27,7 @@ return {
           "html",
           "cssls",
 					"lua_ls",
+          "ts_ls",
 					"stylua",
 					-- "rust_analyzer",
 					"clangd",
@@ -43,6 +44,7 @@ return {
 				ensure_installed = {
 					"prettierd",
 					"ruff",
+          "djlint",
 				},
 			})
 
