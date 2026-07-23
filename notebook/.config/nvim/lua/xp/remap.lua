@@ -32,6 +32,44 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set('n', '<leader>le1', ':set wrap!<CR>', { desc = 'Toggle Wrap' })
 vim.keymap.set('n', '<leader>le2', ':set linebreak!<CR>', { desc = 'Toggle Wrap' })
 
+-- lsp
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Goto Function Definition' })
+vim.keymap.set('n', 'gD',
+				function()
+          local clients = vim.lsp.get_clients({ bufnr = 0 })
+          local encoding = #clients > 0 and clients[1].offset_encoding or 'utf-16'
+          local params = vim.lsp.util.make_position_params(0, encoding)
+          local results = vim.lsp.buf_request_sync(0, 'textDocument/definition', params, 1000)
+          local ok = vim.inspect(results[2].result)
+          if ok ~= "nil" then
+            vim.cmd('tab split')
+            vim.lsp.buf.definition()
+          end
+          print('')
+				end,
+        { desc = 'Goto Function Definition in new tab' }
+      )
+
+-- vim.keymap.set('n', 'gD',
+-- 				function()
+--           vim.cmd('tab split')
+--           vim.lsp.buf.definition()
+-- 				end,
+--         { desc = 'Goto Function Definition in new tab' }
+--       )
+vim.keymap.set('n', 'gF',
+				function()
+          vim.cmd('tab split')
+          local ok = pcall(vim.cmd, 'normal! gf')
+          if not ok then
+            vim.cmd('tabclose')
+            vim.cmd('normal! gT')
+            return
+          end
+				end,
+        { desc = 'Goto Function Definition in new tab' }
+      )
+
 -- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 --===============================================================================================-
