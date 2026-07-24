@@ -2,6 +2,7 @@ return {
 	settings = {
 		basedpyright = {
 			analysis = {
+        completeFunctionParens = true,
 				typeCheckingMode = "standard",
                 autoImportCompletions = true,
 			},

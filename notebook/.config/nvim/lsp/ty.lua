@@ -3,6 +3,7 @@ return {
     ty = {
       completions = {
         autoImport = true,
+        completeFunctionParentheses = true,
       },
     },
   },
