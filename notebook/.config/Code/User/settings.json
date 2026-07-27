@@ -1,0 +1,44 @@
+{
+
+  // THEME
+
+  "editor.semanticHighlighting.enabled": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "window.titleBarStyle": "custom",
+
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.accentColor": "customAccent",
+
+  "catppuccin.colorOverrides": {
+    "all": {
+      "customAccent": "#7e57c2",
+    },
+    "mocha": {
+      "base": "#000000",
+      "mantle": "#020202",
+      "crust": "#040404",
+    },
+  },
+  "catppuccin.customUIColors": {
+    "mocha": {
+      "statusBar.foreground": "accent",
+    },
+  },
+
+  // PYTHON LSP
+  
+  "basedpyright.analysis.typeCheckingMode": "standard",
+
+
+
+  // DJANGO LSP
+
+  "emmet.includeLanguages": {
+    "django-html": "html",
+    "jinja-html": "html"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+
+}
