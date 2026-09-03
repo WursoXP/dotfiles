@@ -107,7 +107,14 @@ return {
 			end,
 			desc = "Files",
 		},
-		-- Git files (<C-p>)
+			-- Find functions (<leader>pd)
+		{
+			"<leader>pd",
+			function()
+				Snacks.picker.lsp_symbols()
+			end,
+			desc = "Functions",
+		},	-- Git files (<C-p>)
 		{
 			"<C-p>",
 			function()
@@ -119,7 +126,7 @@ return {
 		{
 			"<leader>pws",
 			function()
-				Snacks.picker.grep({ default_text = vim.fn.expand("<cword>") })
+				Snacks.picker.grep_word()
 			end,
 			desc = "Grep Word",
 		},
