@@ -1,7 +1,12 @@
 {
 
   // THEME
-
+  
+  "editor.fontFamily": "JetBrainsMono NFM",
+  "editor.fontWeight": "500",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  
   "editor.semanticHighlighting.enabled": true,
   "terminal.integrated.minimumContrastRatio": 1,
   "window.titleBarStyle": "custom",
@@ -28,7 +33,6 @@
   // PYTHON LSP
   
   "basedpyright.analysis.typeCheckingMode": "standard",
-
 
 
   // DJANGO LSP
