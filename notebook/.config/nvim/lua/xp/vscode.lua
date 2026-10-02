@@ -1,41 +1,43 @@
+local vscode = require('vscode')
+
 vim.g.mapleader = " "
 
 -- explorer
 vim.keymap.set("n", "<leader>pv", function()
-  vim.fn.VSCodeNotify("workbench.view.explorer")
+  vscode.action("workbench.view.explorer")
 end, { desc = "Open Explorer" })
 
 -- tabs
 vim.keymap.set("n", "<c-t>", function()
-  vim.fn.VSCodeNotify("workbench.action.files.newUntitledFile")
+  vscode.action("workbench.action.files.newUntitledFile")
 end, { desc = "New file" })
 
 vim.keymap.set({"n", "i"}, "<a-q>", function()
-  vim.fn.VSCodeNotify("workbench.action.closeActiveEditor")
+  vscode.action("workbench.action.closeActiveEditor")
 end, { desc = "Close tab" })
 
 vim.keymap.set({"n", "i"}, "<a-1>", function()
-  vim.fn.VSCodeNotify("workbench.action.openEditorAtIndex1")
+  vscode.action("workbench.action.openEditorAtIndex1")
 end)
 
 vim.keymap.set({"n", "i"}, "<a-2>", function()
-  vim.fn.VSCodeNotify("workbench.action.openEditorAtIndex2")
+  vscode.action("workbench.action.openEditorAtIndex2")
 end)
 
 vim.keymap.set({"n", "i"}, "<a-3>", function()
-  vim.fn.VSCodeNotify("workbench.action.openEditorAtIndex3")
+  vscode.action("workbench.action.openEditorAtIndex3")
 end)
 
 vim.keymap.set({"n", "i"}, "<a-4>", function()
-  vim.fn.VSCodeNotify("workbench.action.openEditorAtIndex4")
+  vscode.action("workbench.action.openEditorAtIndex4")
 end)
 
 vim.keymap.set({"n", "i"}, "<a-5>", function()
-  vim.fn.VSCodeNotify("workbench.action.openEditorAtIndex5")
+  vscode.action("workbench.action.openEditorAtIndex5")
 end)
 
 vim.keymap.set({"n", "i"}, "<a-6>", function()
-  vim.fn.VSCodeNotify("workbench.action.openEditorAtIndex6")
+  vscode.action("workbench.action.openEditorAtIndex6")
 end)
 
 
@@ -63,27 +65,32 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- leitura
 vim.keymap.set("n", "<leader>le1", function()
-  vim.fn.VSCodeNotify("editor.action.toggleWordWrap")
+  vscode.action("editor.action.toggleWordWrap")
 end, { desc = "Toggle Wrap" })
 
 
 -- LSP / VSCode
 vim.keymap.set("n", "gd", function()
-  vim.fn.VSCodeNotify("editor.action.revealDefinition")
+  vscode.action("editor.action.revealDefinition")
 end, { desc = "Goto Function Definition" })
 
-
 vim.keymap.set("n", "gD", function()
-  vim.fn.VSCodeNotify("editor.action.revealDefinitionAside")
+  vscode.action("editor.action.peekDefinition")
 end, { desc = "Goto Function Definition in new tab" })
 
 
+vim.keymap.set("n", "gf", function()
+  vscode.action("editor.action.revealDeclaration")
+end, { desc = "Open link" })
+
 vim.keymap.set("n", "gF", function()
-  vim.fn.VSCodeNotify("editor.action.openLink")
+  vscode.action("editor.action.peekDeclaration")
 end, { desc = "Open link" })
 
 
 -- FORMATTER
-vim.keymap.set("n", "<leader>f", function()
-  vim.fn.VSCodeNotify("editor.action.formatDocument")
+vim.keymap.set("n", "<leader>ff", function()
+  vscode.action("editor.action.formatDocument")
 end, { desc = "Format document" })
+
+
