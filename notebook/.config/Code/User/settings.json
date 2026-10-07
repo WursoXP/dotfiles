@@ -12,18 +12,19 @@
   "window.titleBarStyle": "custom",
 
   "workbench.colorTheme": "Catppuccin Mocha",
-  "catppuccin.accentColor": "customAccent",
+  "catppuccin.accentColor": "custom",
 
   "catppuccin.colorOverrides": {
     "all": {
-      "customAccent": "#7e57c2",
+      "custom": "#7e57c2",
     },
     "mocha": {
       "base": "#000000",
-      "mantle": "#020202",
-      "crust": "#040404",
+      "mantle": "#080808",
+      "crust": "#131313",
     },
   },
+
   "catppuccin.customUIColors": {
     "mocha": {
       "statusBar.foreground": "accent",
@@ -44,5 +45,16 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
+  
+
+  // REMOTE-SSH
+
+
+"remote.SSH.connectTimeout": 60,
+"remote.SSH.useLocalServer": false,
+"remote.SSH.remotePlatform": {
+  "200.145.216.165": "linux",
+  "bugsbunny": "linux"
+}
 
 }

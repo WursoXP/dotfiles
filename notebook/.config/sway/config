@@ -84,6 +84,7 @@ exec_always gsettings set $cinnamon-terminal exec-arg '-e'
 
 for_window [app_id="foot"] opacity 0.925
 for_window [class="code-oss"] opacity 0.96
+for_window [app_id="com.microsoft.VSCode"] opacity 0.96
 for_window [app_id="kitty"] opacity 0.95
 
 exec_always {
