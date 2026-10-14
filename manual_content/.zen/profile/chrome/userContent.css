@@ -1,0 +1,54 @@
+:root {
+  --transparent: #00000000;
+  --dark-background: #000000F1;
+}
+
+@-moz-document domain("web.whatsapp.com") {
+  div[data-testid="archived-drawer"],
+  div[data-testid="settings-drawer"],
+  div[data-testid="calls-drawer"],
+  div[data-testid="status-drawer"],
+  div[data-testid="newsletter-drawer"],
+  div[data-testid="community-drawer"],
+  div[data-testid="media-hub-modal"],
+  div[data-testid="me-tab-drawer"],
+  div[data-testid="profile-drawer"],
+  div[data-testid="account-settings-drawer"],
+  div[data-testid="security-settings-drawer"],
+  div[data-testid="request-account-info-drawer"],
+  div[data-testid="privacy-settings-drawer"],
+  div[data-testid="status-privacy-settings-drawer"],
+  div[data-testid="ddm-drawer"],
+  div[data-testid="blocked-contacts-drawer"],
+  div[data-testid="screen-lock-drawer"],
+  div[data-testid="chats-settings-drawer"],
+  div[data-testid="confirm-popup"],
+  div[data-testid="chat-theme-drawer"],
+  div[class="xnpuxes x1280gxy x78zum5 xdt5ytf x5yr21d x1o0tod x6ikm8r x10wlt62 x67bb7w x10l6tqk x13vifvy xh8yej3 copyable-area"],
+  div[data-testid="consumer-payments-home-drawer"] {
+    background-color: var(--dark-background) !important;
+  }
+
+  span[class*="html-span"] {
+    color: #ffffffff !important;
+  }
+
+  section[data-testid="intro-panel"] {
+    background-color: var(--transparent) !important;
+  }
+
+  * {
+    currentcolor: var(--WDS-content-action-default);
+  }
+}
+
+@-moz-document domain("www.google.com") {
+  div[class="L7OJKe"], /* barra lateral shopping */
+  div[class="uv2Bcc BdPNpe"]{ /* popups de hover */
+    background-color: var(--dark-background) !important;
+  }
+
+  div[class="oLRIie iV8Xhd L92xS"]{ /* fundo quando a barra lateral do shopping esta ativa */
+    background-color: var(--transparent) !important;
+  }
+}

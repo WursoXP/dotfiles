@@ -107,7 +107,11 @@ ou aprende a utilizar o systemd-localed/systemd-firstboot :P
 
 esse comando permite ver os symlinks criados,
 recomendações:
+    
     Criar estes caminhos antes de realizar o stow:
     ~/Pictures
     .config/fish
+
+    Copiar o arquivo de userContent.css para o profile/Chrome correto do .zen
+
 Não recomendo fazer stow do conf do sway.
