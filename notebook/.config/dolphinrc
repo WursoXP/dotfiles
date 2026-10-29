@@ -28,4 +28,4 @@ MenuBar=Disabled
 Plugins=appimagethumbnail,cursorthumbnail,textthumbnail,audiothumbnail,djvuthumbnail,blenderthumbnail,mobithumbnail,gsthumbnail,rawthumbnail,glycin-heif,comicbookthumbnail,opendocumentthumbnail,kraorathumbnail,ebookthumbnail,windowsexethumbnail,heif,glycin-image-rs,glycin-svg,webp-pixbuf,imagethumbnail,windowsimagethumbnail,exrthumbnail,jpegthumbnail,svgthumbnail,glycin-jxl,directorythumbnail
 
 [UiSettings]
-ColorScheme=qt6ct
+ColorScheme=BreezeDark

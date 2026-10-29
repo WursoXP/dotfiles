@@ -17,6 +17,7 @@ set $right l
 set $term kitty
 # Your preferred application launcher
 set $menu pgrep tofi-run > /dev/null 2>&1 && killall tofi-run || tofi-run | xargs swaymsg exec --
+# set $menu pgrep wofi > /dev/null 2>&1 && killall wofi || wofi --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -133,7 +134,7 @@ exec_always {
 # Read `man 5 sway-input` for more information about this section.
 
     input type:touchpad {
-        dwt disabled
+        dwt enabled
         tap enabled
         natural_scroll enabled
         scroll_factor 0.25
