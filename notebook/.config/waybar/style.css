@@ -116,7 +116,8 @@ button:hover {
 #memory:hover,
 #network:hover,
 #pulseaudio:hover,
-#power-profiles-daemon:hover {
+#power-profiles-daemon:hover,
+#mpd:hover {
     color: #ffff00;
     padding: 0px 8px;
     margin: 3px;
@@ -148,13 +149,8 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-}
-
-#battery {
-}
-
 #battery.charging, #battery.plugged {
+    background-color: #000000;
     /*color: #ffffff;
     background-color: #26A65B;*/
 }
@@ -178,6 +174,7 @@ button:hover {
 }
 
 #power-profiles-daemon {
+    background-color: #000000;
 }
 
 #power-profiles-daemon.performance {
@@ -200,35 +197,35 @@ label:focus {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: #000000;
+    color: #ffff00;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
+    background-color: #000000;
     color: #000000;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: #000000;
 }
 
 #custom-media {
-    background-color: #66cc99;
+    background-color: #000000;
     color: #2a5c45;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: #000000;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    background-color: #000000;
 }
 
 #tray > .passive {
@@ -236,34 +233,35 @@ label:focus {
 }
 
 #tray > .needs-attention {
+    background-color: #000000;
+    color: #ffff00;
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: #000000;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+    background-color: #000000;
     color: #2d3436;
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: #000000;
+    color: #ffa000;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    background-color: #000000;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    background-color: #000000;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    background-color: #000000;
 }
 
 #language {
