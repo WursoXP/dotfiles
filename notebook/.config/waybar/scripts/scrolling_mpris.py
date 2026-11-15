@@ -7,8 +7,8 @@ import sys
 GLYPH_FONT_FAMILY="Symbols Nerd Font Mono" # Set to your desired symbols font
 # Those are glyphs that will be always visible at left side of module.
 GLYPHS = {
-    "paused": "",
-    "playing": "",
+    "paused": "",
+    "playing": "",
     "stopped": ""
 }
 DEFAULT_GLYPH = ""  # Glyph when status is unknown or default
