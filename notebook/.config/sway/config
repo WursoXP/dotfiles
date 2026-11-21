@@ -94,7 +94,7 @@ for_window [app_id="kitty"] opacity 0.95
 exec_always {
     swaync-client --reload-config
     swaync-client -rs
-    fcitx5
+    fcitx5 -d --replace
     export TERMINAL=$term
 }
 
@@ -146,9 +146,9 @@ exec_always {
     }
 
     input type:keyboard {
-        xkb_layout br
-        xkb_variant abnt2
-        xkb_options "terminate:ctrl_alt_bksp"
+        # xkb_layout br
+        # xkb_variant abnt2
+        # xkb_options "terminate:ctrl_alt_bksp"
     }
 
 ### Key bindings
