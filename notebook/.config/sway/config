@@ -151,6 +151,11 @@ exec_always {
         # xkb_options "terminate:ctrl_alt_bksp"
     }
 
+    input "12625:20527:Akko_Keyboard" {
+        xkb_layout us
+        xkb_variant ""
+    }
+
 ### Key bindings
 #
 # Basics:
